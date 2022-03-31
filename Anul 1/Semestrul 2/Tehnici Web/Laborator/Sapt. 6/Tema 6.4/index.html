@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" media="all" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <form id="math">
+                <label for="number1">First number</label>
+                <input type="number" name="number1" id="number1">
+                <label for="number2">Second number</label>
+                <input type="number" name="number2" id="number2">
+                <label for="operator">Operation</label>
+                <select name="operator" id="operator">
+                    <option value="add" selected>Adunare</option>
+                    <option value="subtract">Scadere</option>
+                    <option value="multiply">Inmultire</option>
+                    <option value="divide">Impartire</option>
+                    <option value="pow">Ridicare la putere</option>
+                </select>
+                <button>Submit form</button>
+            </form>
+        </section>
+        <section>
+            <h3 id="title">Rezultatul operatiei este: <span id="result">0</span></h3>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,52 @@
+1.) MERGE SORT:
+    --> merge pe principiul divide et impera si interclasare
+
+T(n) = a * T(n/b) + O(n^d)
+
+merge(s,m); unde m - mijlocul
+merge(m,d); unde m - mijlocul
+interclasare();
+
+Deci a = 2; b = 2; d = 1; (interclasare intre doi vectori de n/2 elemente)
+
+T(n) = {
+    O(n^d log n)   ,    daca a = b^d;
+    O(n^d)          ,   daca a < b^d
+    O(n^logb(a)     ,   daca a > b^d
+}
+
+2.) QUICK SORT:
+    --> se alege aleatoriu un pivot si se aseaza elementele a.i la stanga pivotului sa fie element mai mici decat el iar in dreapta mai mari
+
+3.) HEAP SORT:
+    --> arbori binari
+    --> 2 tipuri: MaxHEAP si MinHEAP
+
+    a       a > b && a > c (maxHEAP)
+   / \
+  b   c     a < b && a < c (minHEAP)
+
+2 PASI:
+    1.) HEAPIFY
+    2.) DECAPITARE
+
+ARRAY:      k
+           / \
+        2k+1  2k+2
+
+De exemplu:     1, 12, 9, 5, 6, 10
+
+CODE:
+    for(i = n/2 - 1; i>=0; i--) {
+        // verificare nod curent
+        if (swap) {
+            // facem din nou HEAPIFY(subarbore)
+        }
+    } --> n/2 - 1 ptc se trece prin elementele care nu sunt frunze
+
+DECAPITARE:
+    --> se face swap cu ultimul element si se "elimina"
+    --> se face din nou HEAPIFY pe array-ul ramas
+
+Pentru cele n elemente daca cel mai mare element era pe ultimul nivel => (n/2)logn + n logn
+Complexitate: O(nlog(n))

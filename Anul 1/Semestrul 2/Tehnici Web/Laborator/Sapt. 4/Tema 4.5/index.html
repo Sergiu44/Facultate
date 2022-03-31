@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const translate = {
+            "acesta": "this",
+            "este": "is",
+            "un": "a",
+            "dicționar": "dictionary",
+            "frumos": "beautiful"
+        }
+
+        function getPhrassAndTranslate() {
+            const sentence = window.prompt("Scrie o propozitie si noi o vom traduce mot-a-mot:", "Acesta este un dicționar frumos");
+            const arrayWord = sentence.split(" ");
+            const message = arrayWord.reduce((acc, el) => {
+                if(Object.keys(translate).indexOf(el.toLowerCase()) >= 0) {
+                    acc = acc.concat(translate[el.toLowerCase()]);
+                    acc = acc.concat(" ");
+                } else {
+                    acc = acc.concat(`${el}? `);
+                }
+                return acc;
+            }, "");
+            window.alert(message);
+        }
+
+        window.confirm("Do you want to use the translate app?");
+        getPhrassAndTranslate();
+
+        while(window.confirm("Do you still want to use the translate app?")) {
+            getPhrassAndTranslate();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

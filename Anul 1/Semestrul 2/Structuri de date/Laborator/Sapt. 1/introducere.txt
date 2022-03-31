@@ -1,0 +1,49 @@
+Tehnici de sortare:
+
+1.) Bubble sort - se fac doua for-uri de la i=1,n-1 si j=i+1,n
+
+0 5 2 7 1
+0 2 5 7 1
+0 2 5 1 7
+0 2 1 5 7
+0 1 2 5 7
+
+Cazul cel mai nefavorabil: n-1 + n-2 + n-3 + ... + 0 => n(n-1)/2 -> O(n^2)
+Cazul cel mai favorabil: O(n)
+
+2.) Insertion Sort
+
+3 8 10 7 9 12  -> stim ca sirul 3 este ordonat, il verificat pe 8 in sir
+3 8 10 7 9 12 -> 8 este mai mare decat 3 deci pozitia lui e buna
+ - ~ - -> asemanator pentru 10
+3 7 8 10 9 12 -> 7 este mai mic decat 10 deci parcurgem de la dreapta la stanga si la fiecare numar gasit mai mare decat
+                       7 shiftam la dreapta cu o pozitie numarul respectiv
+3 7 8 9 10 12
+
+Cazul cel mai nefavorabil: 0 + 1 + 2 + 3 + ... + n-1 --> O(n^2)
+Cazul cel mai favorabil: O(n)
+
+3.) Selection sort (min/max) - selectam la fiecare pas i minimul/maximul dintre numerele de la indicele i + 1 la n
+                                si il punem la inceput sau la final
+5 0 8 7 3
+0 5 8 7 3
+0 3 8 7 5
+0 3 5 7 8
+
+Cazul cel mai nefavorabil: n-1 + n-2 + n-3 + ... + 1 + 0 = O(n^2)
+
+
+Tehnici de cautari:
+
+1.) Cautare secventiala: verificam daca exista numarul x in array-ul a
+
+2.) Cautare binara: verificam daca exista numarul x in array-ul a (! a trebuie sa fie ordonat fie crescator/descrescator)
+
+3 5 7 8 10 13 19 29 30 55
+
+(0 + 9)/2 => 4      13 == 10 ? NU, 13 > 10
+(5+9)/2 => 7        13 == 29 ? NU, 13 < 29
+(5+6)/2 => 5        13 == 13 ? DA, pozitia/indicele este 5
+
+Complexitatea: O(log n)
+

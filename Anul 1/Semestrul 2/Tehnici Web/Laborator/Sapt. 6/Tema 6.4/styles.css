@@ -1,0 +1,62 @@
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+form > label, form > input, form > button {
+    display: block;
+}
+
+form > label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #222222;
+}
+
+form > input {
+    min-width: 20vw;
+    height: 30px;
+    font-size: 18px;
+}
+
+form > select {
+    margin: 10px 0;
+    height: 30px;
+    min-width: 50px;
+    font-size: 18px;
+}
+
+form > button {
+    padding: 15px 30px;
+    background-color: #bbbbbb;
+    color: whitesmoke;
+    font-weight: bold;
+    border: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form > button:hover {
+    background-color: #aaaaaa;
+}
+
+form > button:active {
+    outline: 3px solid #222222;
+    outline-offset: 3px;
+}
+
+#title {
+    font-size: 24px;
+    font-family: sans-serif;
+    margin-left: 30px;
+    margin-top: 10px;
+}

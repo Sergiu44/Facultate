@@ -1,0 +1,20 @@
+#mare {
+    background-color: #FFFF00;
+    width: 500px;
+    height: 500px;
+    border: 150px solid black;
+    outline: 150px solid red;
+    margin: 250px auto;
+    position: relative;
+}
+
+#mic {
+    position: absolute;
+    bottom: -370px;
+    left: -300px;
+    width: 1500px;
+    height: 70px;
+    z-index: 100;
+    background-color: #808080;
+    clip-path: polygon(0% 0%, 73.2% 0%, 100% 100%, 0% 100%);
+}

@@ -1,0 +1,83 @@
+html {
+	font-size:12px;
+}
+
+.buton {
+	border:2px brown ridge;
+	background: #ffc37a;
+	font-weight:bold;
+	color:white;
+	text-shadow:0px 0px 4px black,0px 0px 3px black,0px 0px 2px black,0px 0px 2px black;
+	box-shadow:0px -3px 2px grey;
+	height:2em;
+	line-height:2em;
+	width:120px;
+	text-align:center;
+	display:inline-block;
+	font-size:0.9em;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+}
+
+.buton:hover{
+	background:orange;
+}
+
+#coloane > section{
+	border: 1px solid green;
+	padding:2px;
+	min-width:100px;
+}
+
+div#coloane{
+	border-top: 3px inset #BBB;
+}
+
+/* rezolvare */
+
+#coloane {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#coloane > section {
+	flex: 1 1 200px;
+}
+
+#ord_dr_s:hover ~ #coloane {
+	flex-direction: row-reverse;
+}
+
+#ord_3124:hover ~ #coloane > section:first-child {
+	order: 2;
+}
+#ord_3124:hover ~ #coloane > section:nth-child(2) {
+	order: 3;
+}
+#ord_3124:hover ~ #coloane > section:nth-child(3) {
+	order: 1;
+}
+#ord_3124:hover ~ #coloane > section:last-child {
+	order: 4;
+	flex-grow: 3;
+}
+
+#imagini {
+	display: flex;
+	flex-direction: column;
+}
+
+#imagini > img {
+	width: fit-content;
+}
+
+#img_invers:hover ~ #coloane #imagini {
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: flex-end;
+}
+
+#img_invers:hover ~ #coloane #imagini > h3 {
+	order: 1;
+	align-self: flex-start;
+}

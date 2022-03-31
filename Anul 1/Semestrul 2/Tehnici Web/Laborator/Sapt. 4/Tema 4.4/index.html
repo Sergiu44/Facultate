@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const people = [
+            {
+                name: 'Robert',
+                age: 15,
+            },
+            {
+                name: 'Michael',
+                age: 24,
+            },
+            {
+                name: 'Angeline',
+                age: 19,
+            },
+            {
+                name: 'Sebastian',
+                age: 31,
+            },
+            {
+                name: 'George',
+                age: 25,
+            },
+            {
+                name: 'Cristina',
+                age: 17,
+            },
+            {
+                name: 'Elena',
+                age: 28,
+            }
+        ];
+
+        function getPeople() {
+            const age = Number(window.prompt('Enter the age and we will display the people younger than your input', '18'));
+            const filteredPeople = people.filter(person => person.age <= age);
+
+            window.alert(`${filteredPeople.length > 1 ? filteredPeople.length + " persoane:" : 'O persoana:'} ${filteredPeople.map(person => `${person.name} `)}`);
+        }
+
+        getPeople();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        function newContent() {
+            document.open();
+            liste([1,2,3,4,5]);
+            document.close();
+        }
+        function liste(array){
+            const impare = array.filter(el => el%2 === 1);
+            const pare = array.filter(el => el%2 === 0);
+
+            function listToMarkup(list){
+                let markup = list.reduce((acc, el)=> acc + `<li>${el}</li>`, '');
+                return `<ul>${markup}</ul>`;
+            }
+
+            console.log(impare, pare);
+
+            let result = `<h1>Impare</h1>${listToMarkup(impare)}<h1>Pare</h1>${listToMarkup(pare)}`;
+            document.write(result);
+        }
+
+    </script>
+</head>
+<body onload="newContent();">
+<p>Original text</p>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<video></video> - permite vizionarea unui videoclip prin speicificarea fisierului sursa
+<audio></audio> - permite ascultarea unui fisier audio prin specificarea fisierului sursa
+
+ATTRIBUTE:
+   - title -> permite adaugarea unui titlu pentru elementul HTML. Acesta apare cand mouse-ul e deasupra elementului
+   - hidden -> ascunde un element
+   - tabindex -> (accesibilitate) specifica ordinea de focusare la navigarea prin tasta TAB.
+   - data-* -> permite stocarea unor date de catre programator, care pot fi accesare/modificate prin JS
+
+Elemente semantice:
+    - header
+    - nav
+    - main
+    - section
+    - article
+    - aside
+    - footer
+    * toate sunt de tip block
+
+Liste HTML:
+    <dl> - liste descriptive
+        <dt> - termen
+        <dd> - definitie
+    start - numar itnreg ce ne permite sa alegem de unde sa incepem numaratoarea
+    type = "1", "A", 'a', 'I', "i"
+
+HyperLinks:
+    target = "_blank" -> new window
+             "_self" -> current window
+
+IFRAME = o fereastra in interiorul altei ferestre
